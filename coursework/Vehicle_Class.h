@@ -113,26 +113,26 @@ void Vehicle::menu()
 			V1.own();
 			break;
 		}
-		if (a == '2')
+		else if (a == '2')
 		{
 			V2.chosen();
 			V2.loan();
 			V2.own();
 			break;
 		}
-		if (a == '3')
+		else if (a == '3')
 		{
 			V3.chosen();
 			V3.loan();
 			V3.own();
 			break;
 		}
-		if (a == 'b' || a == 'B')
+		else if (a == 'b' || a == 'B')
 		{
 			display();
 			break;
 		}
-		if (a == 'q' || a == 'Q')
+		else if (a == 'q' || a == 'Q')
 		{
 			q = 2;
 			cout << "\n\nProgram quitting...\n\n";
@@ -181,41 +181,33 @@ void Toyota::menu()
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
 		cin.ignore(256, '\n');
-		while (true)
+		switch (a)
 		{
-			if (a == '1')
+		case '1':
 			{
 				T1.chosen();
 				T1.discount();
-				break;
-			}
-			if (a == '2')
+			}break;
+		case '2':
 			{
 				T2.chosen();
 				T2.discount();
-				break;
-			}
-			if (a == '3')
+			}break;
+		case '3':
 			{
 				T3.chosen();
 				T3.discount();
-				break;
-			}
-			if (a == 'b' || a == 'B')
+			}break;
+		case 'b': case 'B':
 			{
 				display();
-				break;
-			}
-			if (a == 'q' || a == 'Q')
+			}break;
+		case 'q': case 'Q':
 			{
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
-				break;
-			}
-			else
-			{
-				menu();
-			}
+			}break;
+		default: menu();
 		}break;
 	}
 }
@@ -225,6 +217,7 @@ void Toyota::discount()
 	double disc = 0.95;
 	cout << "Do you have a coupon? (enter 'Y' for Yes, 'N' for No)\n";
 	cin >> choice;
+	cin.ignore(256, '\n');
 	if (choice == 'Y' || choice == 'y')
 	{
 		coupon();
@@ -279,39 +272,33 @@ void Camry::menu()
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
 		cin.ignore(256, '\n');
-		while (true)
+		switch (a)
 		{
-			if (a == '1')
+		case '1':
 			{
 				C1.chosen();
 				C1.discount();
-				break;
-			}
-			if (a == '2')
+			}break;
+		case '2':
 			{
 				C2.chosen();
 				C2.discount();
-				break;
-			}
-			if (a == '3')
+			}break;
+		case '3':
 			{
 				C3.chosen();
 				C3.discount();
-				break;
-			}
-			if (a == 'b' || a == 'B')
+			}break;
+		case 'b': case 'B':
 			{
 				display();
-				break;
-			}
-			if (a == 'q' || a == 'Q')
+			}break;
+		case 'q': case 'Q':
 			{
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
-				break;
-			}
-			else
-				menu();
+			}break;
+		default: menu();
 		}break;
 	}
 }
@@ -348,39 +335,33 @@ void Altis::menu()
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
 		cin.ignore(256, '\n');
-		while (true)
+		switch (a)
 		{
-			if (a == '1')
+		case '1':
 			{
 				A1.chosen();
 				A1.discount();
-				break;
-			}
-			if (a == '2')
+			}break;
+		case '2':
 			{
 				A2.chosen();
 				A2.discount();
-				break;
-			}
-			if (a == '3')
+			}break;
+		case '3':
 			{
 				A3.chosen();
 				A3.discount();
-				break;
-			}
-			if (a == 'b' || a == 'B')
+			}break;
+		case 'b': case 'B':
 			{
-				A3.chosen();
 				display();
-				break;
-			}
-			if (a == 'q' || a == 'Q')
+			}break;
+		case 'q': case'Q':
 			{
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
-				break;
-			}
-			else
+			}break;
+		default:
 				menu();
 		}break;
 	}
@@ -417,38 +398,33 @@ void Vios::menu()
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
 		cin.ignore(256, '\n');
-		while (true)
+		switch (a)
 		{
-			if (a == '1')
+		case '1':
 			{
 				v1.chosen();
 				v1.discount();
-				break;
-			}
-			if (a == '2')
+			}break;
+		case '2':
 			{
 				v2.chosen();
 				v2.discount();
-				break;
-			}
-			if (a == '3')
+			}break;
+		case '3':
 			{
 				v3.chosen();
 				v3.discount();
-				break;
-			}
-			if (a == 'b' || a == 'B')
+			}break;
+		case 'b': case'B':
 			{
 				display();
-				break;
-			}
-			if (a == 'q' || a == 'Q')
+			}break;
+		case 'q': case'Q':
 			{
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
-				break;
-			}
-			else
+			}break;
+		default:
 				menu();
 		}break;
 	}
@@ -487,38 +463,33 @@ void Honda::menu()
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
 		cin.ignore(256, '\n');
-		while (true)
+		switch (a)
 		{
-			if (a == '1')
+		case '1':
 			{
 				H1.chosen();
 				H1.discount();
-				break;
-			}
-			if (a == '2')
+			}break;
+		case '2':
 			{
 				H2.chosen();
 				H2.discount();
-				break;
-			}
-			if (a == '3')
+			}break;
+		case '3':
 			{
 				H3.chosen();
 				H3.discount();
-				break;
-			}
-			if (a == 'b' || a == 'B')
+			}break;
+		case 'b': case 'B':
 			{
 				display();
-				break;
-			}
-			if (a == 'q' || a == 'Q')
+			}break;
+		case 'q':case 'Q':
 			{
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
-				break;
-			}
-			else
+			}break;
+		default:
 				menu();
 		}break;
 	}
@@ -530,6 +501,7 @@ void Honda::discount()
 	double disc = 0.90;
 	cout << "Do you have a coupon? (enter 'Y' for Yes, 'N' for No)\n";
 	cin >> choice;
+	cin.ignore(256, '\n');
 	if (choice == 'Y' || choice == 'y')
 	{
 		coupon();
@@ -582,38 +554,33 @@ void Accord::menu()
 		cout << "'b' - Return to Menu\n";
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
-		while (true)
+		switch (a)
 		{
-			if (a == '1')
+		case '1':
 			{
 				a1.chosen();
 				a1.discount();
-				break;
-			}
-			if (a == '2')
+			}break;
+		case '2':
 			{
 				a2.chosen();
 				a2.discount();
-				break;
-			}
-			if (a == '3')
+			}break;
+		case '3':
 			{
 				a3.chosen();
 				a3.discount();
-				break;
-			}
-			if (a == 'b' || a == 'B')
+			}break;
+			case 'b': case 'B':
 			{
 				display();
-				break;
-			}
-			if (a == 'q' || a == 'Q')
+			}break;
+			case 'q':case 'Q':
 			{
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
-				break;
-			}
-			else
+			}break;
+		default:
 				menu();
 		}break;
 	}
@@ -650,40 +617,35 @@ void Civic::menu()
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
 		cin.ignore(256, '\n');
-		while (true)
+		switch (a)
 		{
-			if (a == '1')
+		case '1':
 			{
 				c1.chosen();
 				c1.discount();
-				break;
-			}
-			if (a == '2')
+			}break;
+		case '2':
 			{
 				c2.chosen();
 				c2.discount();
-				break;
-			}
-			if (a == '3')
+			}break;
+		case '3':
 			{
 				c3.chosen();
 				c3.discount();
-				break;
-			}
-			if (a == 'b' || a == 'B')
+			}break;
+		case 'b': case 'B':
 			{
 				display();
-				break;
-			}
-			if (a == 'q' || a == 'Q')
+			}break;
+		case 'q': case 'Q':
 			{
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
-				break;
-			}
-			else
+			}break;
+		default:
 				menu();
-		}break;;
+		}break;
 	}
 }
 //
@@ -718,38 +680,34 @@ void City::menu()
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
 		cin.ignore(256, '\n');
-		while (true)
+		switch(a)
 		{
-			if (a == '1')
-			{
-				cty1.chosen();
-				cty1.discount();
-				break;
-			}
-			if (a == '2')
-			{
-				cty2.chosen();
-				cty2.discount();
-				break;
-			}
-			if (a == '3')
-			{
-				cty3.chosen();
-				cty3.discount();
-				break;
-			}
-			if (a == 'b' || a == 'B')
-			{
+		case '1':
+		{
+			cty1.chosen();
+			cty1.discount();
+		}break;
+		case '2':
+		{
+			cty2.chosen();
+			cty2.discount();
+		}break;
+		case '3':
+		{
+			cty3.chosen();
+			cty3.discount();
+		}break;
+		case 'b':case 'B':
+		{
 				display();
-				break;
-			}
-			if (a == 'q' || a == 'Q')
-			{
+		}break;
+		case 'q':case 'Q':
+		{
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
 				break;
-			}
-			else
+		}break;
+		default:
 				menu();
 		}break;
 	}
