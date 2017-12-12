@@ -43,69 +43,63 @@ void display()
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
 		cin.ignore(256, '\n');
-		if (a == '1')
+		switch (a)
+		{
+		case '1':
 		{
 			option = &vehicle;
 			option->menu();
-			break;
-		}
-		if (a == '2')
+		}break;
+		case '2':
 		{
 			option = &toyota;
 			option->menu();
-			break;
-		}
-		if (a == '3')
+		}break;
+		case '3':
 		{
 			option = &camry;
 			option->menu();
-			break;
-		}
-		if (a == '4')
+		}break;
+		case '4':
 		{
 			option = &altis;
 			option->menu();
-			break;
-		}
-		if (a == '5')
+		}break;
+		case '5':
 		{
 			option = &vios;
 			option->menu();
-			break;
-		}
-		if (a == '6')
+		}break;
+		case '6':
 		{
 			option = &honda;
 			option->menu();
-			break;
-		}
-		if (a == '7')
+		}break;
+		case '7':
 		{
 			option = &accord;
 			option->menu();
-			break;
-		}
-		if (a == '8')
+		}break;
+		case '8':
 		{
 			option = &civic;
 			option->menu();
-			break;
-		}
-		if (a == '9')
+		}break;
+		case '9':
 		{
 			option = &city;
 			option->menu();
-			break;
-		}
-		if (a == 'q' || a == 'Q')
+		}break;
+		case 'q': case 'Q':
 		{
 			i = 2;
 			cout << "\n\nProgram quitting...\n\n";
-		}
-		else
-			cout << endl;
+		}break;
+		default: display();
+		}break;
 	}
 }
+
 int coupon()
 {
 	srand(time(0));
@@ -122,6 +116,10 @@ int coupon()
 		if (tries <= 0)
 		{
 			break;
+		}
+		else if (guess < number)
+		{
+			cout << "Invalid Coupon...\n\n" << endl;
 		}
 		else if (guess > number)
 		{

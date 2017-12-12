@@ -361,8 +361,7 @@ void Altis::menu()
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
 			}break;
-		default:
-				menu();
+		default: menu();
 		}break;
 	}
 }
@@ -424,8 +423,7 @@ void Vios::menu()
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
 			}break;
-		default:
-				menu();
+		default: menu();
 		}break;
 	}
 }
@@ -489,8 +487,7 @@ void Honda::menu()
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
 			}break;
-		default:
-				menu();
+		default: menu();
 		}break;
 	}
 }
@@ -580,8 +577,7 @@ void Accord::menu()
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
 			}break;
-		default:
-				menu();
+		default: menu();
 		}break;
 	}
 }
@@ -643,8 +639,7 @@ void Civic::menu()
 				q = 2;
 				cout << "\n\nProgram quitting...\n\n";
 			}break;
-		default:
-				menu();
+		default: menu();
 		}break;
 	}
 }
@@ -707,8 +702,7 @@ void City::menu()
 				cout << "\n\nProgram quitting...\n\n";
 				break;
 		}break;
-		default:
-				menu();
+		default: menu();
 		}break;
 	}
 }
