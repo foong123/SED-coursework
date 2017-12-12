@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -43,7 +42,7 @@ void display()
 		cout << "'9' - Honda City\n";
 		cout << "'q' - Quit program\n" << "--------------------------\n" << ">>";
 		cin >> a;
-		cin.ignore(256,'\n');
+		cin.ignore(256, '\n');
 		if (a == '1')
 		{
 			option = &vehicle;
@@ -145,9 +144,9 @@ int coupon()
 
 int main()
 {
-	char name[100];
+	string name;
 	cout << "Enter name please\n>> ";
-	cin >> name;
+	getline(cin, name);
 	cout << "\nHello Mr." << name << endl << endl;
 	display();
 	system("pause");

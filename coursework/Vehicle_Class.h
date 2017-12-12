@@ -7,7 +7,6 @@
 using namespace std;
 void display();
 int coupon();
-
 class Vehicle
 {
 public:
@@ -155,16 +154,9 @@ class Toyota : public Vehicle
 public:
 	Toyota() = default;
 	Toyota(string model, string color, float price);
-	void own();
 	void menu() override;
 	void discount();
 };
-
-void Toyota::own()
-{
-	cout << "Congratulation! You have own a " << model << endl;
-	cout << "The color of your car is " << color << endl;
-}
 
 Toyota::Toyota(string model, string color, float price) :Vehicle(model, color, price)
 {
@@ -261,14 +253,8 @@ class Camry : public Toyota
 public:
 	Camry() = default;
 	Camry(string model, string color, float price);
-	void own();
 	void menu() override;
 };
-
-void Camry::own()
-{
-	cout << "Congratulation! " << model << " " << color << " is yours" << endl;
-}
 
 Camry::Camry(string model, string color, float price) :Toyota(model, color, price)
 {
@@ -336,14 +322,8 @@ class Altis : public Toyota
 public:
 	Altis() = default;
 	Altis(string model, string color, float price);
-	void own();
 	void menu() override;
 };
-
-void Altis::own()
-{
-	cout << "Congratulation! You have own a " << model << " with a color of " << color << endl;
-}
 
 Altis::Altis(string model, string color, float price) :Toyota(model, color, price)
 {
@@ -411,15 +391,8 @@ class Vios : public Toyota
 public:
 	Vios() = default;
 	Vios(string model, string color, float price);
-	void own();
 	void menu() override;
 };
-
-void Vios::own()
-{
-	cout << "Congratulation! You have own a " << model << endl;
-	cout << "The color of your car is " << color << endl;
-}
 
 Vios::Vios(string model, string color, float price) :Toyota(model, color, price)
 {
@@ -487,16 +460,9 @@ class Honda : public Vehicle
 public:
 	Honda() = default;
 	Honda(string model, string color, float price);
-	void own();
 	void menu() override;
 	void discount();
 };
-
-void Honda::own()
-{
-	cout << "Congratulation! You have own a " << model << endl;
-	cout << "The color of your car is " << color << endl;
-}
 
 Honda::Honda(string model, string color, float price) :Vehicle(model, color, price)
 {
@@ -591,15 +557,8 @@ class Accord : public Honda
 public:
 	Accord() = default;
 	Accord(string model, string color, float price);
-	void own();
 	void menu() override;
 };
-
-void Accord::own()
-{
-	cout << "Thank you for choosing Honda " << model << endl;
-	cout << "We hope that you will enjoy our custom " << color << "paint" << endl;
-}
 
 Accord::Accord(string model, string color, float price) :Honda(model, color, price)
 {
@@ -665,14 +624,8 @@ class Civic : public Honda
 public:
 	Civic() = default;
 	Civic(string model, string color, float price);
-	void own();
 	void menu() override;
 };
-
-void Civic::own()
-{
-	cout << "Good choice in choosing " << model << " instead of Toyota brand" << endl;
-}
 
 Civic::Civic(string model, string color, float price) :Honda(model, color, price)
 {
@@ -739,15 +692,9 @@ class City : public Honda
 public:
 	City() = default;
 	City(string model, string color, float price);
-	void own();
 	void menu() override;
 };
 
-void City::own()
-{
-	cout << "Your model is  " << model << endl;
-	cout << "The color of your car is " << color << endl;
-}
 City::City(string model, string color, float price) :Honda(model, color, price)
 {
 }
